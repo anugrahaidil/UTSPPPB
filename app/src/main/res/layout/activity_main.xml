@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to My App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        />
+    <ImageView
+        android:id="@+id/img_app"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/app"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/txt_title"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/box_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_app"
+        android:layout_alignLeft="@+id/img_app"
+        android:layout_alignRight="@+id/img_app"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusBottomEnd="8dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/box_name"
+        android:layout_marginLeft="105dp"
+        android:text="Submit"/>
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_toRightOf="@id/btnSubmit"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/box_name"/>
+
+
+
+</RelativeLayout>
